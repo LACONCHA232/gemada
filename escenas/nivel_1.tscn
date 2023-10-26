@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2b1egfpdeqc6"]
+
+[ext_resource type="Texture2D" uid="uid://bhuejrpuqyaks" path="res://sprites/cielo.png" id="1_eu8fn"]
+[ext_resource type="Texture2D" uid="uid://107m2by8o6ji" path="res://sprites/piso.png" id="2_3inys"]
+[ext_resource type="PackedScene" uid="uid://pet120ck6jaq" path="res://escenas/trees.tscn" id="2_xcwbx"]
+[ext_resource type="PackedScene" uid="uid://r5x2l335rmg1" path="res://escenas/player.tscn" id="3_cyt7w"]
+[ext_resource type="PackedScene" uid="uid://rmvhp5lgqnaa" path="res://escenas/mobileControls.tscn" id="4_l8wbp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qb23h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsejs"]
+size = Vector2(55, 987.75)
+
+[node name="nivel1" type="Node2D"]
+
+[node name="cielo" type="Sprite2D" parent="."]
+position = Vector2(11699, -133)
+scale = Vector2(23.9248, 2.86597)
+texture = ExtResource("1_eu8fn")
+
+[node name="trees" parent="." instance=ExtResource("2_xcwbx")]
+
+[node name="piso" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_qb23h")
+
+[node name="CollisionPiso" type="CollisionPolygon2D" parent="piso"]
+position = Vector2(11707.6, 522)
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-4190.33, 50.6667, -3794.67, 52, -3794, 109.333, -3792.67, 111, -2493.33, 110.667, -2493, 51.6667, -1712, 52, -1711, 111, -1061.33, 110.333, -1061, 51.6667, -660.333, 52.3333, -660.333, 110.333, 641, 110.333, 641.333, 51.6667, 1041.67, 53.3333, 1041.67, 110.667, 1691.67, 111, 1692.33, 53.3333, 2492.33, 52, 2493, 110.333, 3142.33, 110.333, 3143.33, 52.3333, 3543, 52.3333, 3543.67, 110, 4190.33, 111, 4190, 198, 4180.67, 199, -4189.67, 195.667)
+
+[node name="SpritePiso" type="Sprite2D" parent="piso"]
+position = Vector2(11705.6, 519)
+scale = Vector2(3, 3)
+texture = ExtResource("2_3inys")
+
+[node name="player" parent="." instance=ExtResource("3_cyt7w")]
+position = Vector2(-37, 426)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(140, -41)
+
+[node name="pared-izquierada" type="StaticBody2D" parent="."]
+position = Vector2(97, 99)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared-izquierada"]
+position = Vector2(-121, 137.75)
+shape = SubResource("RectangleShape2D_xsejs")
+
+[node name="pared-derecha" type="StaticBody2D" parent="."]
+position = Vector2(122, 222)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pared-derecha"]
+position = Vector2(22994, 139)
+shape = SubResource("RectangleShape2D_xsejs")
+
+[node name="mobileControls" parent="." instance=ExtResource("4_l8wbp")]

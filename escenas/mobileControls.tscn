@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://rmvhp5lgqnaa"]
+
+[ext_resource type="Texture2D" uid="uid://c14le2ksnut0x" path="res://sprites/touchButton/left.png" id="1_fe5oa"]
+[ext_resource type="Texture2D" uid="uid://v530rmuvo1eh" path="res://sprites/touchButton/right.png" id="2_4q2sh"]
+
+[node name="mobileControls" type="CanvasLayer"]
+
+[node name="leftButton" type="TouchScreenButton" parent="."]
+position = Vector2(100, 825)
+texture_normal = ExtResource("1_fe5oa")
+passby_press = true
+action = "ui_left"
+
+[node name="rightButton" type="TouchScreenButton" parent="."]
+position = Vector2(390, 825)
+texture_normal = ExtResource("2_4q2sh")
+passby_press = true
+action = "ui_right"
+
+[node name="jumpButton" type="TouchScreenButton" parent="."]
+position = Vector2(1600, 980)
+rotation = -1.5708
+texture_normal = ExtResource("2_4q2sh")
+action = "ui_accept"

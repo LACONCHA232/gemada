@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://pet120ck6jaq"]
+
+[ext_resource type="Texture2D" uid="uid://54qa4rw0xjqy" path="res://sprites/trees/palmera-2.png" id="2_tkpa7"]
+[ext_resource type="Texture2D" uid="uid://bxpsxih6krdri" path="res://sprites/trees/palmera-3.png" id="3_8ebdf"]
+[ext_resource type="Texture2D" uid="uid://c8t7mpp7cgyvy" path="res://sprites/trees/palmera-4.png" id="4_g3c0c"]
+[ext_resource type="Texture2D" uid="uid://bh0fvpujejgtv" path="res://sprites/trees/palmera-5.png" id="5_iw6hl"]
+[ext_resource type="Texture2D" uid="uid://dmvhexkp12lxd" path="res://sprites/trees/palmera-6.png" id="6_kiipa"]
+
+[node name="trees" type="Node2D"]
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(40, 260)
+scale = Vector2(3.37784, 3.37784)
+texture = ExtResource("2_tkpa7")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(23226, 530)
+scale = Vector2(3.37784, 3.37784)
+texture = ExtResource("2_tkpa7")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(10593.2, 315.894)
+scale = Vector2(4.15537, 4.15537)
+texture = ExtResource("3_8ebdf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1408, 406)
+scale = Vector2(5.25207, 5.25207)
+texture = ExtResource("4_g3c0c")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(6552.5, 138.734)
+scale = Vector2(5.24479, 5.24479)
+texture = ExtResource("5_iw6hl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(13990, -264)
+scale = Vector2(6.875, 6.52672)
+texture = ExtResource("6_kiipa")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(17662.7, -320.843)
+scale = Vector2(7.48178, 7.48178)
+texture = ExtResource("5_iw6hl")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(21927, -279)
+scale = Vector2(8.1146, 7.70352)
+texture = ExtResource("6_kiipa")
+flip_h = true
