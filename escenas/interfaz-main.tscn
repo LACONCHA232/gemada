@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-[gd_scene load_steps=5 format=3 uid="uid://bi7ha6184w22g"]
-
-[ext_resource type="Texture2D" path="res://interfaz/img/fondo.png" id="1_vcrmh"]
-[ext_resource type="Texture2D" path="res://interfaz/img/memoji.png" id="2_8jx8n"]
-[ext_resource type="Texture2D" path="res://interfaz/img/church.png" id="3_g2ipu"]
-[ext_resource type="Texture2D" path="res://interfaz/img/building.png" id="4_7d864"]
-=======
-[gd_scene load_steps=5 format=3 uid="uid://d0eu3ypnvibd8"]
+[gd_scene load_steps=5 format=3 uid="uid://nejbjdesq4yk"]
 
 [ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="1_vcrmh"]
 [ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="2_8jx8n"]
 [ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="3_g2ipu"]
 [ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="4_7d864"]
->>>>>>> 45376fb (se agrego la interfaz al 80%)
 
 [node name="menu-principal" type="Control"]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
