@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://v530rmuvo1eh" path="res://sprites/touchButton/right.png" id="2_4q2sh"]
 
 [node name="mobileControls" type="CanvasLayer"]
+metadata/_edit_horizontal_guides_ = []
 
 [node name="leftButton" type="TouchScreenButton" parent="."]
 position = Vector2(100, 825)

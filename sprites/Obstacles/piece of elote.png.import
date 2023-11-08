@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bnfm6i4ruv0b2"
+=======
+uid="uid://cc2o6ao63vhvo"
+>>>>>>> 7a376618f1fba4f1038f2e6d9d5484474643236d
 path="res://.godot/imported/piece of elote.png-0f54f6a103547e908d72d8f794afcfe8.ctex"
 metadata={
 "vram_texture": false

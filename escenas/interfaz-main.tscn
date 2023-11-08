@@ -1,4 +1,30 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://bi7ha6184w22g"]
+=======
+[gd_scene load_steps=9 format=3 uid="uid://nejbjdesq4yk"]
+
+[ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="1_vcrmh"]
+[ext_resource type="Script" path="res://script/interfaz-main.gd" id="1_wsvpq"]
+[ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="2_8jx8n"]
+[ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="3_g2ipu"]
+[ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="4_7d864"]
+[ext_resource type="Texture2D" uid="uid://d261df0s70spf" path="res://interfaz/icons/play-icon.svg" id="6_3gcgk"]
+[ext_resource type="Texture2D" uid="uid://c2wksrenbiad2" path="res://interfaz/icons/settings-icon.svg" id="7_2al6t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2cqc"]
+bg_color = Color(0.972549, 0.843137, 0.427451, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.980392, 0.831373, 0.552941, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.976471, 0.85098, 0, 0.184314)
+shadow_size = 10
+>>>>>>> 7a376618f1fba4f1038f2e6d9d5484474643236d
 
 [node name="menu-principal" type="Control"]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
@@ -8,25 +34,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wsvpq")
 metadata/_edit_lock_ = true
 
-[node name="fondo-atardecer" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1922.0
 offset_bottom = 1080.0
 metadata/_edit_lock_ = true
 
-[node name="titulo" type="RichTextLabel" parent="."]
+[node name="title" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.283
 anchor_top = 0.086
 anchor_right = 0.697
 anchor_bottom = 0.196
-offset_left = -11.36
+offset_left = -5.35999
 offset_top = -72.88
-offset_right = 43.7599
+offset_right = 49.7599
 offset_bottom = 8.31999
+grow_horizontal = 2
 theme_override_colors/default_color = Color(1, 0.835294, 0.341176, 1)
 theme_override_font_sizes/normal_font_size = 150
 bbcode_enabled = true
@@ -60,3 +88,61 @@ offset_right = 1971.0
 offset_bottom = 1077.0
 expand_mode = 1
 metadata/_edit_lock_ = true
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.5
+offset_top = -50.0
+offset_right = 173.5
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
+text = "Iniciar Partida"
+icon = ExtResource("6_3gcgk")
+
+[node name="CharacterButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.413
+anchor_top = 0.627
+anchor_right = 0.586
+anchor_bottom = 0.716
+offset_left = -6.46003
+offset_top = -47.16
+offset_right = 8.37995
+offset_bottom = -47.28
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
+text = "Personaje"
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.406
+anchor_top = 0.778
+anchor_right = 0.587
+anchor_bottom = 0.867
+offset_left = 6.97997
+offset_top = -70.2401
+offset_right = 6.45998
+offset_bottom = -70.36
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
+text = "Configuración"
+icon = ExtResource("7_2al6t")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

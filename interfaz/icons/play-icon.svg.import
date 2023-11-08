@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://c6r6qorj0dsjv"
-=======
-uid="uid://mewl2q7ejq1b"
->>>>>>> 7a376618f1fba4f1038f2e6d9d5484474643236d
-path="res://.godot/imported/Banco.png-0b96e8211ee94438ec4e8114531dbf4b.ctex"
+uid="uid://d261df0s70spf"
+path="res://.godot/imported/play-icon.svg-3415c430ec5c78aea2eedd4f706d6f66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Obstacles/Banco.png"
-dest_files=["res://.godot/imported/Banco.png-0b96e8211ee94438ec4e8114531dbf4b.ctex"]
+source_file="res://interfaz/icons/play-icon.svg"
+dest_files=["res://.godot/imported/play-icon.svg-3415c430ec5c78aea2eedd4f706d6f66.ctex"]
 
 [params]
 
@@ -36,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
