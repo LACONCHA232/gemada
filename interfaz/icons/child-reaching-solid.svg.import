@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhqvmghitqg3c"
-path="res://.godot/imported/Trashcan.png-fb71b82336119209a58aa7fe9a201332.ctex"
+uid="uid://b1l243vmsnco0"
+path="res://.godot/imported/child-reaching-solid.svg-37c32d6a752a120c1cb674420dbe375a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Obstacles/Trashcan.png"
-dest_files=["res://.godot/imported/Trashcan.png-fb71b82336119209a58aa7fe9a201332.ctex"]
+source_file="res://interfaz/icons/child-reaching-solid.svg"
+dest_files=["res://.godot/imported/child-reaching-solid.svg-37c32d6a752a120c1cb674420dbe375a.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://bi7ha6184w22g"]
 =======
 [gd_scene load_steps=9 format=3 uid="uid://nejbjdesq4yk"]
+=======
+[gd_scene load_steps=10 format=3 uid="uid://nejbjdesq4yk"]
+>>>>>>> 2f9f8fc641807cd50c12f1beb85804aee1ebf9b5
 
 [ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="1_vcrmh"]
 [ext_resource type="Script" path="res://script/interfaz-main.gd" id="1_wsvpq"]
@@ -10,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="4_7d864"]
 [ext_resource type="Texture2D" uid="uid://d261df0s70spf" path="res://interfaz/icons/play-icon.svg" id="6_3gcgk"]
 [ext_resource type="Texture2D" uid="uid://c2wksrenbiad2" path="res://interfaz/icons/settings-icon.svg" id="7_2al6t"]
+[ext_resource type="Texture2D" uid="uid://b1l243vmsnco0" path="res://interfaz/icons/child-reaching-solid.svg" id="7_v2wjw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2cqc"]
 bg_color = Color(0.972549, 0.843137, 0.427451, 1)
@@ -112,19 +117,20 @@ icon = ExtResource("6_3gcgk")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.413
-anchor_top = 0.627
-anchor_right = 0.586
-anchor_bottom = 0.716
+anchor_top = 0.589
+anchor_right = 0.59
+anchor_bottom = 0.672
 offset_left = -6.46003
-offset_top = -47.16
-offset_right = 8.37995
-offset_bottom = -47.28
+offset_top = -6.12005
+offset_right = 0.699936
+offset_bottom = 0.239945
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
-text = "Personaje"
+text = "Personaje     "
+icon = ExtResource("7_v2wjw")
 
 [node name="SettingsButton" type="Button" parent="."]
 layout_mode = 1
