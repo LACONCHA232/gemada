@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-[gd_scene format=3 uid="uid://bi7ha6184w22g"]
-=======
-[gd_scene load_steps=9 format=3 uid="uid://nejbjdesq4yk"]
-=======
 [gd_scene load_steps=10 format=3 uid="uid://nejbjdesq4yk"]
->>>>>>> 2f9f8fc641807cd50c12f1beb85804aee1ebf9b5
 
 [ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="1_vcrmh"]
 [ext_resource type="Script" path="res://script/interfaz-main.gd" id="1_wsvpq"]
@@ -29,7 +22,6 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 shadow_color = Color(0.976471, 0.85098, 0, 0.184314)
 shadow_size = 10
->>>>>>> 7a376618f1fba4f1038f2e6d9d5484474643236d
 
 [node name="menu-principal" type="Control"]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
@@ -46,6 +38,7 @@ metadata/_edit_lock_ = true
 layout_mode = 0
 offset_right = 1922.0
 offset_bottom = 1080.0
+texture = ExtResource("1_vcrmh")
 metadata/_edit_lock_ = true
 
 [node name="title" type="RichTextLabel" parent="."]
@@ -74,6 +67,7 @@ offset_left = 717.0
 offset_top = 217.0
 offset_right = 1259.0
 offset_bottom = 459.0
+texture = ExtResource("2_8jx8n")
 expand_mode = 2
 metadata/_edit_lock_ = true
 
@@ -83,7 +77,9 @@ offset_left = -278.0
 offset_top = 328.0
 offset_right = 1115.0
 offset_bottom = 1112.0
+texture = ExtResource("3_g2ipu")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="building" type="TextureRect" parent="."]
 layout_mode = 0
@@ -91,6 +87,7 @@ offset_left = 973.0
 offset_top = 516.0
 offset_right = 1971.0
 offset_bottom = 1077.0
+texture = ExtResource("4_7d864")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
