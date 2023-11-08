@@ -1,0 +1,185 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjy4sk0hdn3sf"]
+
+[ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="2_0ut8i"]
+[ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="3_fb3iq"]
+[ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="4_vje7f"]
+[ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="5_8yryv"]
+[ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="5_wphdh"]
+[ext_resource type="Texture2D" uid="uid://bc4vogs2ehii4" path="res://sprites/character/p1.png" id="6_6yw3p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hq8cl"]
+bg_color = Color(0.333333, 0.454902, 0.984314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="menu-principal" type="Control"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+metadata/_edit_horizontal_guides_ = [549.0]
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1080.0
+texture = ExtResource("2_0ut8i")
+metadata/_edit_lock_ = true
+
+[node name="title" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.283
+anchor_top = 0.086
+anchor_right = 0.697
+anchor_bottom = 0.196
+offset_left = -5.35999
+offset_top = -72.88
+offset_right = 49.7599
+offset_bottom = 8.31999
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 0.835294, 0.341176, 1)
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "Chaska Run"
+scroll_active = false
+context_menu_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="memoji" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 717.0
+offset_top = 217.0
+offset_right = 1259.0
+offset_bottom = 459.0
+texture = ExtResource("3_fb3iq")
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="church" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -278.0
+offset_top = 328.0
+offset_right = 1115.0
+offset_bottom = 1112.0
+texture = ExtResource("4_vje7f")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="building" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 516.0
+offset_right = 1971.0
+offset_bottom = 1077.0
+texture = ExtResource("5_8yryv")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_left = 240.0
+offset_top = 210.0
+offset_right = 1681.0
+offset_bottom = 1055.0
+color = Color(1, 0.835294, 0.341176, 0.894118)
+
+[node name="CloseButton" type="TextureButton" parent="ColorRect"]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+offset_left = 1237.0
+offset_top = 4.0
+offset_right = 1399.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_wphdh")
+
+[node name="title" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -314.5
+offset_top = 42.0
+offset_right = 314.5
+offset_bottom = 128.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Seleccione su jugador"
+horizontal_alignment = 1
+
+[node name="info-character" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -158.0
+offset_top = -246.0
+offset_right = 158.0
+offset_bottom = -204.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Rodolfo “El hidrocalido”
+"
+
+[node name="info-character2" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -158.0
+offset_top = -210.0
+offset_right = 158.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "Representa a Aguascalientes y a las chascas"
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -182.5
+offset_right = 76.0
+offset_bottom = 182.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_6yw3p")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -138.5
+offset_top = -133.0
+offset_right = 138.5
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_hq8cl")
+text = "Jugar"

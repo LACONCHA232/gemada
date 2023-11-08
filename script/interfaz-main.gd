@@ -5,13 +5,10 @@ extends Control
 func _ready():
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
+#Escucha el evento del boton "inicar partidas" para que cuando sea precionado ejecute el juego
 func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://escenas/nivel_1.tscn")
+	
+	
  
  
