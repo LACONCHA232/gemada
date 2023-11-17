@@ -1,0 +1,193 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxdj8ya2q2i54"]
+
+[ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="1_4cbs0"]
+[ext_resource type="Script" path="res://script/interfaz-main.gd" id="1_cnl3q"]
+[ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="2_hjype"]
+[ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="3_jn81t"]
+[ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="4_ni7gq"]
+[ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="5_d7xfw"]
+
+[node name="menu-principal" type="Control"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cnl3q")
+metadata/_edit_lock_ = true
+metadata/_edit_horizontal_guides_ = [549.0]
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1080.0
+texture = ExtResource("1_4cbs0")
+metadata/_edit_lock_ = true
+
+[node name="title" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.283
+anchor_top = 0.086
+anchor_right = 0.697
+anchor_bottom = 0.196
+offset_left = -5.35999
+offset_top = -72.88
+offset_right = 49.7599
+offset_bottom = 8.31999
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 0.835294, 0.341176, 1)
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "Chaska Run"
+scroll_active = false
+context_menu_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="memoji" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 717.0
+offset_top = 217.0
+offset_right = 1259.0
+offset_bottom = 459.0
+texture = ExtResource("2_hjype")
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="church" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -278.0
+offset_top = 328.0
+offset_right = 1115.0
+offset_bottom = 1112.0
+texture = ExtResource("3_jn81t")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="building" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 516.0
+offset_right = 1971.0
+offset_bottom = 1077.0
+texture = ExtResource("4_ni7gq")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -218.0
+offset_right = 622.0
+offset_bottom = 484.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.835294, 0.341176, 0.894118)
+
+[node name="CloseButton" type="TextureButton" parent="ColorRect"]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+offset_left = 998.0
+offset_top = 16.0
+offset_right = 1160.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_d7xfw")
+
+[node name="title" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -314.5
+offset_top = 42.0
+offset_right = 314.5
+offset_bottom = 128.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Ajustes"
+horizontal_alignment = 1
+
+[node name="VBoxContainerLabels" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -58.0
+offset_right = 3.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="idioma" type="Label" parent="ColorRect/VBoxContainerLabels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Idioma"
+
+[node name="musica" type="Label" parent="ColorRect/VBoxContainerLabels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Música"
+
+[node name="efectos" type="Label" parent="ColorRect/VBoxContainerLabels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Efectos"
+
+[node name="VBoxContainerOptions" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -49.0
+offset_right = 170.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 78
+
+[node name="OptionButtonLangguage" type="OptionButton" parent="ColorRect/VBoxContainerOptions"]
+clip_contents = true
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 22
+item_count = 2
+selected = 0
+allow_reselect = true
+popup/item_0/text = "Español"
+popup/item_0/id = 1
+popup/item_0/disabled = true
+popup/item_0/separator = true
+popup/item_1/text = "English"
+popup/item_1/id = 2
+popup/item_1/disabled = true
+popup/item_1/separator = true
+
+[node name="HSliderMusic" type="HSlider" parent="ColorRect/VBoxContainerOptions"]
+layout_mode = 2
+
+[node name="HSlider2Effx" type="HSlider" parent="ColorRect/VBoxContainerOptions"]
+layout_mode = 2
+
+[connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]

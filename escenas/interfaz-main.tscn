@@ -128,6 +128,7 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
 text = "Personaje     "
 icon = ExtResource("7_v2wjw")
+script = ExtResource("1_wsvpq")
 
 [node name="SettingsButton" type="Button" parent="."]
 layout_mode = 1
@@ -149,3 +150,5 @@ text = "Configuración"
 icon = ExtResource("7_2al6t")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CharacterButton" to="CharacterButton" method="_on_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
