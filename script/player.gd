@@ -11,7 +11,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 #Instanciamos nuestras animaciones que estan en estos nodos y las instanciamos listas para cambiar de frames 
 @onready var animaciones = $animations/SpriteAnimado
+@onready var jump = $jumpSound
+@onready var landing = $landingSound
+@onready var music = $musica
 
+func _ready():
+	music.play()
 
  
 #Se ejecuta la simulación de física. Es donde la lógica de movimiento y comportamiento del personaje se colocará.
@@ -19,10 +24,12 @@ func _physics_process(delta):
 	#Si el personaje no esto en el piso, se aplicara el movimiento en el eje Y para que caiga
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		landing.play()
 
 	#Si se preciona el evento provoca el salto, entonces salta
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump.play()
 
 	#Se obtiene la dirección de entrada horizontal utilizando los ejes configurados como "ui_left" y "ui_right". 
 	#Si direction no es cero (lo que significa que hay entrada), se actualiza la velocidad horizontal del personaje (velocity.x)

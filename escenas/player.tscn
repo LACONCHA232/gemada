@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://r5x2l335rmg1"]
+[gd_scene load_steps=7 format=3 uid="uid://r5x2l335rmg1"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_4i6n6"]
+[ext_resource type="AudioStream" uid="uid://byjetb1j8hbmu" path="res://sonidos/efectos/jump.wav" id="3_girum"]
 [ext_resource type="PackedScene" uid="uid://bm2auledf78wr" path="res://escenas/animations.tscn" id="3_otcpy"]
+[ext_resource type="AudioStream" uid="uid://5l3fub3nu3kk" path="res://sonidos/efectos/landing.wav" id="4_chvwk"]
+[ext_resource type="AudioStream" uid="uid://dey8tm8jom38k" path="res://sonidos/musica/musica.mp3" id="5_7crb1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxfgl"]
 size = Vector2(130, 315.75)
@@ -17,3 +20,15 @@ one_way_collision = true
 
 [node name="animations" parent="." instance=ExtResource("3_otcpy")]
 position = Vector2(78, 151)
+
+[node name="jumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_girum")
+volume_db = 10.22
+
+[node name="landingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_chvwk")
+volume_db = 14.428
+
+[node name="musica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_7crb1")
+volume_db = 14.428

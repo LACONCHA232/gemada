@@ -152,42 +152,38 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
 text = "Efectos"
 
-[node name="VBoxContainerOptions" type="VBoxContainer" parent="ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -89.0
-offset_top = -49.0
-offset_right = 170.0
-offset_bottom = 195.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 78
-
-[node name="OptionButtonLangguage" type="OptionButton" parent="ColorRect/VBoxContainerOptions"]
+[node name="OptionButtonLangguage" type="OptionButton" parent="ColorRect"]
 clip_contents = true
 layout_mode = 2
+offset_left = 560.0
+offset_top = 306.0
+offset_right = 819.0
+offset_bottom = 345.0
 size_flags_stretch_ratio = 0.0
 theme_override_font_sizes/font_size = 22
+button_pressed = true
 item_count = 2
 selected = 0
-allow_reselect = true
+fit_to_longest_item = false
 popup/item_0/text = "Español"
 popup/item_0/id = 1
-popup/item_0/disabled = true
-popup/item_0/separator = true
 popup/item_1/text = "English"
 popup/item_1/id = 2
-popup/item_1/disabled = true
-popup/item_1/separator = true
 
-[node name="HSliderMusic" type="HSlider" parent="ColorRect/VBoxContainerOptions"]
+[node name="HSliderMusic" type="HSlider" parent="ColorRect"]
 layout_mode = 2
+offset_left = 560.0
+offset_top = 418.0
+offset_right = 819.0
+offset_bottom = 434.0
+value = 50.0
 
-[node name="HSlider2Effx" type="HSlider" parent="ColorRect/VBoxContainerOptions"]
+[node name="HSlider2Effx" type="HSlider" parent="ColorRect"]
 layout_mode = 2
+offset_left = 560.0
+offset_top = 516.0
+offset_right = 819.0
+offset_bottom = 532.0
+value = 50.0
 
 [connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
