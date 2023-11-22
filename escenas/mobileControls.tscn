@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://rmvhp5lgqnaa"]
+[gd_scene load_steps=5 format=3 uid="uid://rmvhp5lgqnaa"]
 
 [ext_resource type="Texture2D" uid="uid://c14le2ksnut0x" path="res://sprites/touchButton/left.png" id="1_fe5oa"]
 [ext_resource type="Texture2D" uid="uid://v530rmuvo1eh" path="res://sprites/touchButton/right.png" id="2_4q2sh"]
+[ext_resource type="Texture2D" uid="uid://cdnhc7jh6j83w" path="res://interfaz/icons/menu_hamburguesa.svg" id="3_wg7og"]
+[ext_resource type="Script" path="res://script/Menu_Hamburguesa.gd" id="4_mnhcr"]
 
 [node name="mobileControls" type="CanvasLayer"]
 metadata/_edit_horizontal_guides_ = []
@@ -23,3 +25,14 @@ position = Vector2(1600, 980)
 rotation = -1.5708
 texture_normal = ExtResource("2_4q2sh")
 action = "ui_accept"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 32.0
+offset_top = 19.0
+offset_right = 715.0
+offset_bottom = 702.0
+scale = Vector2(0.235, 0.235)
+texture_normal = ExtResource("3_wg7og")
+script = ExtResource("4_mnhcr")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
