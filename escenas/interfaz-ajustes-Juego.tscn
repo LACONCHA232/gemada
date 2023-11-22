@@ -1,0 +1,214 @@
+[gd_scene load_steps=8 format=3 uid="uid://co4uiswuuhvgj"]
+
+[ext_resource type="Script" path="res://escenas/Menu_Hamburguesa.gd" id="1_7yp8t"]
+[ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="2_papp7"]
+[ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="3_yr5wf"]
+[ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="4_5dye5"]
+[ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="5_c75bk"]
+[ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="6_0xyxr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgkdc"]
+bg_color = Color(0.333333, 0.454902, 0.984314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="menu-principal" type="Control"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7yp8t")
+metadata/_edit_lock_ = true
+metadata/_edit_horizontal_guides_ = [549.0]
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1080.0
+texture = ExtResource("2_papp7")
+metadata/_edit_lock_ = true
+
+[node name="title" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.283
+anchor_top = 0.086
+anchor_right = 0.697
+anchor_bottom = 0.196
+offset_left = -5.35999
+offset_top = -72.88
+offset_right = 49.7599
+offset_bottom = 8.31999
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1, 0.835294, 0.341176, 1)
+theme_override_font_sizes/normal_font_size = 150
+bbcode_enabled = true
+text = "Chaska Run"
+scroll_active = false
+context_menu_enabled = true
+metadata/_edit_lock_ = true
+
+[node name="memoji" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 717.0
+offset_top = 217.0
+offset_right = 1259.0
+offset_bottom = 459.0
+texture = ExtResource("3_yr5wf")
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="church" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -278.0
+offset_top = 328.0
+offset_right = 1115.0
+offset_bottom = 1112.0
+texture = ExtResource("4_5dye5")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="building" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 516.0
+offset_right = 1971.0
+offset_bottom = 1077.0
+texture = ExtResource("5_c75bk")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -560.0
+offset_top = -218.0
+offset_right = 622.0
+offset_bottom = 484.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.835294, 0.341176, 0.894118)
+
+[node name="CloseButton" type="TextureButton" parent="ColorRect"]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+offset_left = 998.0
+offset_top = 16.0
+offset_right = 1160.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_0xyxr")
+
+[node name="title" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -314.5
+offset_top = 42.0
+offset_right = 314.5
+offset_bottom = 128.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Ajustes"
+horizontal_alignment = 1
+
+[node name="VBoxContainerLabels" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -58.0
+offset_right = 3.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="idioma" type="Label" parent="ColorRect/VBoxContainerLabels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Idioma"
+
+[node name="musica" type="Label" parent="ColorRect/VBoxContainerLabels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Música"
+
+[node name="efectos" type="Label" parent="ColorRect/VBoxContainerLabels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "Efectos"
+
+[node name="OptionButtonLangguage" type="OptionButton" parent="ColorRect"]
+clip_contents = true
+layout_mode = 2
+offset_left = 560.0
+offset_top = 306.0
+offset_right = 819.0
+offset_bottom = 345.0
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 22
+button_pressed = true
+item_count = 2
+selected = 0
+fit_to_longest_item = false
+popup/item_0/text = "Español"
+popup/item_0/id = 1
+popup/item_1/text = "English"
+popup/item_1/id = 2
+
+[node name="HSliderMusic" type="HSlider" parent="ColorRect"]
+layout_mode = 2
+offset_left = 560.0
+offset_top = 418.0
+offset_right = 819.0
+offset_bottom = 434.0
+value = 50.0
+
+[node name="HSlider2Effx" type="HSlider" parent="ColorRect"]
+layout_mode = 2
+offset_left = 560.0
+offset_top = 516.0
+offset_right = 819.0
+offset_bottom = 532.0
+value = 50.0
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -103.0
+offset_top = -118.0
+offset_right = 174.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_mgkdc")
+text = "Volver al Menu Principal"
+
+[connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
