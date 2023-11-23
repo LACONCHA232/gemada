@@ -92,6 +92,7 @@ expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="PlayButton" type="Button" parent="."]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -107,7 +108,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
-text = "Iniciar Partida"
+text = "KEY_PLAY"
 icon = ExtResource("6_3gcgk")
 
 [node name="CharacterButton" type="Button" parent="."]
@@ -126,7 +127,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
-text = "Personaje     "
+text = "KEY_CHAR"
 icon = ExtResource("7_v2wjw")
 script = ExtResource("1_wsvpq")
 
@@ -146,7 +147,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_n2cqc")
-text = "Configuración"
+text = "KEY_SETTINGS"
 icon = ExtResource("7_2al6t")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

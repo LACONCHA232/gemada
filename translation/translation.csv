@@ -1,0 +1,13 @@
+,es,en,ja,zh
+KEY_PLAY,Iniciar Partida,Start Game,ゲームをスタート,开始游戏      
+KEY_CHAR,Personaje      ,Character   ,キャラクター       ,特点                
+KEY_SETTINGS,Configuración,Settings      ,設定                   ,设置             
+KEY_CHOSE_PLAYER,Seleccione Jugador,Choose Player ,プレーヤーの選択,选择玩家
+KEY_NAME_PLAYER_RODOLFO,"Rodolfo ""El hidrocalido""","Rudolph ""The hot waterian""",ロドルフォ「ハイドロカリド」,鲁道夫“热水者”
+KEY_INFO_PLAYER_RODOLFO,Representa a Aguascalientes y a las chascas,He represents Aguascalientes and corn in chunks,アグアスカリエンテスとチャスカを代表する,代表阿瓜斯卡连特斯人和查斯卡人
+KEY_NAME_PLAYER_RONALDINO,"Ronaldiño ""El Futbolero""","Ronaldinho ""The Soccer Player""",ロナウジーニョ「ザ・サッカー選手」,罗纳尔迪尼奥“足球运动员”
+KEY_INFO_PLAYER_RONALDINO,Representa a Brasil y a su gente ,Represents Brazil and its people,ブラジルとブラジル国民を代表する,代表巴西及其人民
+KEY_LANGUAGE,Idioma,Language,言語,语言
+KEY_MUSIC,Música,Music,音楽,音乐
+KEY_EFECTS,Efectos,Effects,効果,效果
+KEY_MAIN_MENU,Menú Principal,Main menu,メインメニュー,主菜单

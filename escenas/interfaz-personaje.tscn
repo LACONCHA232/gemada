@@ -117,7 +117,7 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 60
-text = "Seleccione su jugador"
+text = "KEY_CHOSE_PLAYER"
 horizontal_alignment = 1
 
 [node name="info-character" type="Label" parent="ColorRect"]
@@ -134,8 +134,7 @@ offset_bottom = -204.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 28
-text = "Rodolfo “El hidrocalido”
-"
+text = "KEY_NAME_PLAYER_RODOLFO"
 
 [node name="info-character2" type="Label" parent="ColorRect"]
 layout_mode = 1
@@ -151,7 +150,7 @@ offset_bottom = -168.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 28
-text = "Representa a Aguascalientes y a las chascas"
+text = "KEY_INFO_PLAYER_RODOLFO"
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect"]
 layout_mode = 1
@@ -170,21 +169,22 @@ texture = ExtResource("6_6yw3p")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="ColorRect"]
+clip_contents = true
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -138.5
+offset_left = -187.5
 offset_top = -133.0
-offset_right = 138.5
+offset_right = 187.5
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_hq8cl")
-text = "Jugar"
+text = "KEY_PLAY"
 
 [connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

@@ -25,6 +25,10 @@ window/stretch/mode="viewport"
 
 pointing/emulate_touch_from_mouse=true
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://translation/translation.en.translation", "res://translation/translation.es.translation", "res://translation/translation.ja.translation", "res://translation/translation.zh.translation")
+
 [rendering]
 
 renderer/rendering_method="mobile"

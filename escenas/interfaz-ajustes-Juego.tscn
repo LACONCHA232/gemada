@@ -123,7 +123,7 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 60
-text = "Ajustes"
+text = "KEY_SETTINGS"
 horizontal_alignment = 1
 
 [node name="VBoxContainerLabels" type="VBoxContainer" parent="ColorRect"]
@@ -141,56 +141,32 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
 
-[node name="idioma" type="Label" parent="ColorRect/VBoxContainerLabels"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 40
-text = "Idioma"
-
 [node name="musica" type="Label" parent="ColorRect/VBoxContainerLabels"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
-text = "Música"
+text = "KEY_MUSIC"
 
 [node name="efectos" type="Label" parent="ColorRect/VBoxContainerLabels"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 40
-text = "Efectos"
-
-[node name="OptionButtonLangguage" type="OptionButton" parent="ColorRect"]
-clip_contents = true
-layout_mode = 2
-offset_left = 560.0
-offset_top = 306.0
-offset_right = 819.0
-offset_bottom = 345.0
-size_flags_stretch_ratio = 0.0
-theme_override_font_sizes/font_size = 22
-button_pressed = true
-item_count = 2
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "Español"
-popup/item_0/id = 1
-popup/item_1/text = "English"
-popup/item_1/id = 2
+text = "KEY_EFECTS"
 
 [node name="HSliderMusic" type="HSlider" parent="ColorRect"]
 layout_mode = 2
 offset_left = 560.0
-offset_top = 418.0
+offset_top = 315.0
 offset_right = 819.0
-offset_bottom = 434.0
+offset_bottom = 331.0
 value = 50.0
 
 [node name="HSlider2Effx" type="HSlider" parent="ColorRect"]
 layout_mode = 2
 offset_left = 560.0
-offset_top = 516.0
+offset_top = 414.0
 offset_right = 819.0
-offset_bottom = 532.0
+offset_bottom = 430.0
 value = 50.0
 
 [node name="Button" type="Button" parent="ColorRect"]
@@ -200,15 +176,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -103.0
-offset_top = -118.0
-offset_right = 174.0
-offset_bottom = -33.0
+offset_left = -197.0
+offset_top = -199.0
+offset_right = 233.0
+offset_bottom = -114.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_mgkdc")
-text = "Volver al Menu Principal"
+text = "KEY_MAIN_MENU"
 
 [connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

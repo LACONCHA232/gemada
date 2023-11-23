@@ -1,10 +1,6 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 #Escucha el evento del boton "inicar partidas" para que cuando sea precionado ejecute el juego
 func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://escenas/nivel_1.tscn")
@@ -26,4 +22,19 @@ func _on_close_button_pressed():
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://escenas/nivel_1.tscn")
 	
+
+
+#boton para seleccionar el idoma del juego
+func _on_option_button_langguage_item_selected(index):
+	match index:
+		0:
+			TranslationServer.set_locale("es")
+		1:
+			TranslationServer.set_locale("en")
+		2:
+			TranslationServer.set_locale("ja")
+		3:
+			TranslationServer.set_locale("zh")
+			
+
 
