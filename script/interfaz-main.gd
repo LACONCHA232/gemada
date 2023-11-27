@@ -11,7 +11,7 @@ func _on_pressed():
 
 #Escucha el evento del boton "ajustes" para que cuando sea precionado ejecute la ventana ajustes
 func _on_settings_button_pressed():
-	get_tree().change_scene_to_file("res://escenas/interfaz-ajustes.tscn")
+	get_tree().change_scene_to_file("res://escenas/interfazAjustes.tscn")
 
 #Esta funcion le da la funcionalidad al boton de salir
 func _on_close_button_pressed():
@@ -35,6 +35,13 @@ func _on_option_button_langguage_item_selected(index):
 			TranslationServer.set_locale("ja")
 		3:
 			TranslationServer.set_locale("zh")
-			
 
+#afecta a los sliders del sonido
+var musicSlider = AudioServer.get_bus_index("music")
+var sfxSlider = AudioServer.get_bus_index("sfx")
 
+func _on_h_slider_music_value_changed(value):
+	AudioServer.set_bus_volume_db(musicSlider, linear_to_db(value))
+
+func _on_h_slider_2_effx_value_changed(value):
+	AudioServer.set_bus_volume_db(sfxSlider, linear_to_db(value))

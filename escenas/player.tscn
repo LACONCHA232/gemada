@@ -24,11 +24,13 @@ position = Vector2(78, 151)
 [node name="jumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_girum")
 volume_db = 10.22
+bus = &"sfx"
 
 [node name="landingSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_chvwk")
 volume_db = 14.428
+bus = &"sfx"
 
 [node name="musica" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_7crb1")
-volume_db = 14.428
+bus = &"music"

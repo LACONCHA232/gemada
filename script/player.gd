@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends CharacterBody2D 
 
 #Se declaran constantes para establecer valores que nunca cambiaran en el juego
 #La velocidad se aplica al eje X
@@ -52,3 +52,7 @@ func _physics_process(delta):
 #Esta funcione hace que el sprite gire a la izquierda cuando se va en esa direccion
 func update_flipH(direction): 
 	animaciones.flip_h = direction.x < 0
+
+
+
+

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://6lxd4o0xhwut"]
+
+[ext_resource type="Script" path="res://autoloads/musicController.gd" id="1_2yg2p"]
+[ext_resource type="AudioStream" uid="uid://dey8tm8jom38k" path="res://sonidos/musica/musica.mp3" id="2_nup4n"]
+
+[node name="musicController" type="Node"]
+script = ExtResource("1_2yg2p")
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nup4n")
+autoplay = true
+max_distance = 1e+09
+bus = &"music"

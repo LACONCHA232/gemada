@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwpbwbf8b4xq2"]
+
+[ext_resource type="Script" path="res://script/sound_sfx.gd" id="1_o4coo"]
+[ext_resource type="AudioStream" uid="uid://byjetb1j8hbmu" path="res://sonidos/efectos/jump.wav" id="2_vsbqj"]
+[ext_resource type="AudioStream" uid="uid://5l3fub3nu3kk" path="res://sonidos/efectos/landing.wav" id="3_ogjgy"]
+
+[node name="soundSfx" type="Node2D"]
+script = ExtResource("1_o4coo")
+
+[node name="jumpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_vsbqj")
+volume_db = 10.22
+bus = &"sfx"
+
+[node name="landingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ogjgy")
+volume_db = 14.428
+bus = &"sfx"
