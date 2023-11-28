@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://script/interfaz-main.gd" id="1_yhjo7"]
 [ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="2_v77ma"]
-[ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="3_6nf4w"]
 [ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="4_hthbv"]
 [ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="5_fiih6"]
+[ext_resource type="Texture2D" uid="uid://bs6dm313yf7s8" path="res://interfaz/img/Maiz.png" id="6_18efy"]
 [ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="6_mlkqm"]
 
 [node name="menuPrincipal" type="Control"]
@@ -44,16 +44,6 @@ bbcode_enabled = true
 text = "Chaska Run"
 scroll_active = false
 context_menu_enabled = true
-metadata/_edit_lock_ = true
-
-[node name="memoji" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 717.0
-offset_top = 217.0
-offset_right = 1259.0
-offset_bottom = 459.0
-texture = ExtResource("3_6nf4w")
-expand_mode = 2
 metadata/_edit_lock_ = true
 
 [node name="church" type="TextureRect" parent="."]
@@ -192,6 +182,15 @@ offset_bottom = 532.0
 max_value = 1.0
 step = 0.001
 value = 0.5
+
+[node name="memoji" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 707.0
+offset_right = 719.0
+offset_bottom = 1037.0
+texture = ExtResource("6_18efy")
+expand_mode = 1
 
 [connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="item_selected" from="ColorRect/OptionButtonLangguage" to="." method="_on_option_button_langguage_item_selected"]

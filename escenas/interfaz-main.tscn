@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="1_vcrmh"]
 [ext_resource type="Script" path="res://script/interfaz-main.gd" id="1_wsvpq"]
-[ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="2_8jx8n"]
+[ext_resource type="Texture2D" uid="uid://bs6dm313yf7s8" path="res://interfaz/img/Maiz.png" id="3_7226p"]
 [ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="3_g2ipu"]
 [ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="4_7d864"]
 [ext_resource type="Texture2D" uid="uid://d261df0s70spf" path="res://interfaz/icons/play-icon.svg" id="6_3gcgk"]
@@ -63,13 +63,12 @@ metadata/_edit_lock_ = true
 
 [node name="memoji" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 717.0
-offset_top = 217.0
-offset_right = 1259.0
-offset_bottom = 459.0
-texture = ExtResource("2_8jx8n")
-expand_mode = 2
-metadata/_edit_lock_ = true
+offset_left = 777.0
+offset_top = 153.0
+offset_right = 1145.0
+offset_bottom = 521.0
+texture = ExtResource("3_7226p")
+expand_mode = 1
 
 [node name="church" type="TextureRect" parent="."]
 layout_mode = 0
