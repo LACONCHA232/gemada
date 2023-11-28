@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://script/interfaz-main.gd" id="1_11oss"]
 [ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="2_0ut8i"]
-[ext_resource type="Texture2D" uid="uid://xoaf3jhsb7xd" path="res://interfaz/img/memoji.png" id="3_fb3iq"]
 [ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="4_vje7f"]
 [ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="5_8yryv"]
 [ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="5_wphdh"]
 [ext_resource type="Texture2D" uid="uid://bc4vogs2ehii4" path="res://sprites/character/p1.png" id="6_6yw3p"]
+[ext_resource type="Texture2D" uid="uid://bs6dm313yf7s8" path="res://interfaz/img/Maiz.png" id="7_dakhf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hq8cl"]
 bg_color = Color(0.333333, 0.454902, 0.984314, 1)
@@ -52,16 +52,6 @@ bbcode_enabled = true
 text = "Chaska Run"
 scroll_active = false
 context_menu_enabled = true
-metadata/_edit_lock_ = true
-
-[node name="memoji" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 717.0
-offset_top = 217.0
-offset_right = 1259.0
-offset_bottom = 459.0
-texture = ExtResource("3_fb3iq")
-expand_mode = 2
 metadata/_edit_lock_ = true
 
 [node name="church" type="TextureRect" parent="."]
@@ -185,6 +175,16 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_hq8cl")
 text = "KEY_PLAY"
+
+[node name="memoji" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 667.0
+offset_right = 1575.0
+offset_bottom = 2058.0
+scale = Vector2(0.383839, 0.295429)
+texture = ExtResource("7_dakhf")
+expand_mode = 1
 
 [connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
