@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_u7kkl")
-music_audio_level = 0.807
-sfx_audio_level = 0.753
-input_language = 0
+music_audio_level = 0.185
+sfx_audio_level = 0.403
+input_language = 1

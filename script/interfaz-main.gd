@@ -36,11 +36,18 @@ func _ready():
 		h_slider_music.value = user_prefs.music_audio_level
 	if h_slider_2_effx:
 		h_slider_2_effx.value = user_prefs.sfx_audio_level
+	if option_button_langguage:
+		option_button_langguage.select(user_prefs.input_language)
+
+
 
 
 
 #boton para seleccionar el idoma del juego
 func _on_option_button_langguage_item_selected(index):
+	if user_prefs:
+			user_prefs.input_language = index
+			user_prefs.save()
 	match index:
 		0:
 			TranslationServer.set_locale("es")
@@ -50,10 +57,11 @@ func _on_option_button_langguage_item_selected(index):
 			TranslationServer.set_locale("ja")
 		3:
 			TranslationServer.set_locale("zh")
-			
-	if user_prefs:
-		user_prefs.input_language = index
-		user_prefs.save()
+
+func item_selected(id):
+	option_button_langguage.select(id)
+
+
 
 #afecta a los sliders del sonido
 var musicSlider = AudioServer.get_bus_index("music")

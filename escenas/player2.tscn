@@ -1,7 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://ntjj4l2jeerb"]
+[gd_scene load_steps=23 format=3 uid="uid://cypflo2r1wcmp"]
 
 [ext_resource type="Script" path="res://script/player2.gd" id="1_g1fom"]
-[ext_resource type="Texture2D" uid="uid://lvbbvawhrg5e" path="res://sprites/oak_woods_v1.0/character/char_blue.png" id="1_snh0f"]
+[ext_resource type="Texture2D" path="res://sprites/oak_woods_v1.0/character/char_blue.png" id="1_snh0f"]
 [ext_resource type="AudioStream" uid="uid://byjetb1j8hbmu" path="res://sonidos/efectos/jump.wav" id="3_xf8uj"]
 [ext_resource type="AudioStream" uid="uid://5l3fub3nu3kk" path="res://sonidos/efectos/landing.wav" id="4_iaxqp"]
 [ext_resource type="AudioStream" uid="uid://dey8tm8jom38k" path="res://sonidos/musica/musica.mp3" id="5_yk71x"]
