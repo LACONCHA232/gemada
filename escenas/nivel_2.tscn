@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cphrp3rk4fjl2"]
 
-[ext_resource type="Texture2D" path="res://sprites/oak_woods_v1.0/oak_woods_tileset.png" id="1_bnatf"]
+[ext_resource type="Texture2D" uid="uid://yg1fqd2p53hu" path="res://sprites/oak_woods_v1.0/oak_woods_tileset.png" id="1_bnatf"]
 [ext_resource type="PackedScene" uid="uid://cypflo2r1wcmp" path="res://escenas/player2.tscn" id="2_1a2sl"]
-[ext_resource type="Texture2D" path="res://sprites/oak_woods_v1.0/background/background_layer_1.png" id="3_hn0gf"]
+[ext_resource type="Texture2D" uid="uid://o2hjbb5mktkv" path="res://sprites/oak_woods_v1.0/background/background_layer_1.png" id="3_hn0gf"]
 [ext_resource type="PackedScene" uid="uid://rmvhp5lgqnaa" path="res://escenas/mobileControls.tscn" id="4_xfyay"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78qqt"]
