@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4kwjses4el4r"]
+
+[ext_resource type="Script" path="res://script/chaska2D.gd" id="1_5kw5d"]
+[ext_resource type="Texture2D" uid="uid://dm5wkit0tvpvf" path="res://sprites/pixelFood/chaska.png" id="1_5v8er"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2trdp"]
+radius = 9.0
+
+[node name="chaska" type="Node2D"]
+
+[node name="chaska2D" type="Area2D" parent="."]
+script = ExtResource("1_5kw5d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chaska2D"]
+scale = Vector2(1.95, 1.95)
+shape = SubResource("CircleShape2D_2trdp")
+
+[node name="Sprite2D" type="Sprite2D" parent="chaska2D"]
+texture_filter = 1
+position = Vector2(0, -1)
+texture = ExtResource("1_5v8er")
+
+[connection signal="body_entered" from="chaska2D" to="chaska2D" method="_on_body_entered"]
