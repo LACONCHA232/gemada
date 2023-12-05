@@ -13,10 +13,10 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animaciones = $Node2D/AnimatedSprite2D
 @onready var jump = $jumpSound
 @onready var landing = $landingSound
-@onready var music = $musica
+@onready var music2 = $musica2
 
 func _ready():
-	music.play()
+	music2.play();
 
  
 #Se ejecuta la simulación de física. Es donde la lógica de movimiento y comportamiento del personaje se colocará.
