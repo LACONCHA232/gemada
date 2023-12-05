@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://lvbbvawhrg5e" path="res://sprites/oak_woods_v1.0/character/char_blue.png" id="1_snh0f"]
 [ext_resource type="AudioStream" uid="uid://byjetb1j8hbmu" path="res://sonidos/efectos/jump.wav" id="3_xf8uj"]
 [ext_resource type="AudioStream" uid="uid://5l3fub3nu3kk" path="res://sonidos/efectos/landing.wav" id="4_iaxqp"]
-[ext_resource type="AudioStream" uid="uid://dey8tm8jom38k" path="res://sonidos/musica/musica.mp3" id="5_yk71x"]
+[ext_resource type="AudioStream" uid="uid://cna0ayqmqe8yx" path="res://sonidos/musica/musica2.mp3" id="6_aekm5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rc3mq"]
 size = Vector2(30, 41)
@@ -159,6 +159,5 @@ stream = ExtResource("4_iaxqp")
 volume_db = 14.428
 bus = &"sfx"
 
-[node name="musica" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_yk71x")
-bus = &"music"
+[node name="musica2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_aekm5")
