@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://caili1asv3qag"]
+
+[ext_resource type="Script" path="res://script/taco2D.gd" id="1_qs5f3"]
+[ext_resource type="Texture2D" uid="uid://c24hysbcjtmf2" path="res://sprites/pixelFood/taco.png" id="1_rgdhf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_advo8"]
+
+[node name="taco" type="Node2D"]
+
+[node name="taco2D" type="Area2D" parent="."]
+script = ExtResource("1_qs5f3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="taco2D"]
+scale = Vector2(1.23, 1.23)
+shape = SubResource("CircleShape2D_advo8")
+
+[node name="Sprite2D" type="Sprite2D" parent="taco2D"]
+texture_filter = 1
+position = Vector2(-0.5, -0.5)
+scale = Vector2(0.96875, 0.96875)
+texture = ExtResource("1_rgdhf")
+
+[connection signal="body_entered" from="taco2D" to="taco2D" method="_on_body_entered"]
