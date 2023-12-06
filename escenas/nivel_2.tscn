@@ -722,10 +722,6 @@ position = Vector2(-15, -22)
 zoom = Vector2(3, 3)
 
 [node name="mobileControls" parent="." instance=ExtResource("4_xfyay")]
-layer = 0
-offset = Vector2(-6.545, 1.16)
-scale = Vector2(1.08, 1.08)
-transform = Transform2D(1.08, 0, 0, 1.08, -6.545, 1.16)
 follow_viewport_scale = 0.001
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

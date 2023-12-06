@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="4_vje7f"]
 [ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="5_8yryv"]
 [ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="5_wphdh"]
-[ext_resource type="Texture2D" uid="uid://bc4vogs2ehii4" path="res://sprites/character/p1.png" id="6_6yw3p"]
+[ext_resource type="Texture2D" uid="uid://d1n6mws4bjn6v" path="res://sprites/miniaturas/p1_distopic.png" id="6_2ipdt"]
 [ext_resource type="Texture2D" uid="uid://bs6dm313yf7s8" path="res://interfaz/img/Maiz.png" id="7_dakhf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hq8cl"]
@@ -149,13 +149,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.0
+offset_left = -142.5
 offset_top = -182.5
-offset_right = 76.0
+offset_right = 162.5
 offset_bottom = 182.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_6yw3p")
+texture = ExtResource("6_2ipdt")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="ColorRect"]
