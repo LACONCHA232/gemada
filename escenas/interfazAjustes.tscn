@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="6_mlkqm"]
 
 [node name="menuPrincipal" type="Control"]
+process_mode = 3
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 3
 anchors_preset = 15

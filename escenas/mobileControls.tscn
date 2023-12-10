@@ -1,11 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://rmvhp5lgqnaa"]
+[gd_scene load_steps=7 format=3 uid="uid://rmvhp5lgqnaa"]
 
 [ext_resource type="Texture2D" uid="uid://c14le2ksnut0x" path="res://sprites/touchButton/left.png" id="1_fe5oa"]
+[ext_resource type="Script" path="res://script/mobileControls.gd" id="1_ltw7k"]
 [ext_resource type="Texture2D" uid="uid://v530rmuvo1eh" path="res://sprites/touchButton/right.png" id="2_4q2sh"]
 [ext_resource type="Texture2D" uid="uid://cdnhc7jh6j83w" path="res://interfaz/icons/menu_hamburguesa.svg" id="3_wg7og"]
-[ext_resource type="Script" path="res://script/Menu_Hamburguesa.gd" id="4_mnhcr"]
+[ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="5_3701u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eop3v"]
+bg_color = Color(0.333333, 0.454902, 0.984314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="mobileControls" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_ltw7k")
 metadata/_edit_horizontal_guides_ = []
 
 [node name="leftButton" type="TouchScreenButton" parent="."]
@@ -33,6 +43,137 @@ offset_right = 715.0
 offset_bottom = 702.0
 scale = Vector2(0.235, 0.235)
 texture_normal = ExtResource("3_wg7og")
-script = ExtResource("4_mnhcr")
 
-[connection signal="pressed" from="menu_button" to="menu_button" method="_on_pressed"]
+[node name="pause_menu" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="pause_menu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 369.0
+offset_top = 189.0
+offset_right = 1551.0
+offset_bottom = 891.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color(1, 0.835294, 0.341176, 0.894118)
+
+[node name="CloseButton" type="TextureButton" parent="pause_menu/ColorRect"]
+clip_contents = true
+layout_direction = 2
+layout_mode = 2
+offset_left = 998.0
+offset_top = 16.0
+offset_right = 1160.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3701u")
+
+[node name="title" type="Label" parent="pause_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -314.5
+offset_top = 42.0
+offset_right = 314.5
+offset_bottom = 128.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "KEY_SETTINGS"
+horizontal_alignment = 1
+
+[node name="VBoxContainerLabels" type="VBoxContainer" parent="pause_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -58.0
+offset_right = 3.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Home_button" type="Button" parent="pause_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -159.0
+offset_right = 262.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_eop3v")
+text = "KEY_MAIN_MENU"
+
+[node name="VBoxContainerLabels2" type="VBoxContainer" parent="pause_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -262.0
+offset_top = -34.0
+offset_right = 42.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="musica" type="Label" parent="pause_menu/ColorRect/VBoxContainerLabels2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "KEY_MUSIC"
+
+[node name="efectos" type="Label" parent="pause_menu/ColorRect/VBoxContainerLabels2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "KEY_EFECTS"
+
+[node name="HSliderMusic" type="HSlider" parent="pause_menu/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 560.0
+offset_top = 340.0
+offset_right = 819.0
+offset_bottom = 356.0
+max_value = 1.0
+step = 0.001
+value = 0.5
+
+[node name="HSlider2Effx" type="HSlider" parent="pause_menu/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 560.0
+offset_top = 438.0
+offset_right = 819.0
+offset_bottom = 454.0
+max_value = 1.0
+step = 0.001
+value = 0.5
+
+[connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="pause_menu/ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="pause_menu/ColorRect/Home_button" to="." method="_on_home_button_pressed"]
+[connection signal="value_changed" from="pause_menu/ColorRect/HSliderMusic" to="." method="_on_h_slider_music_value_changed"]
+[connection signal="value_changed" from="pause_menu/ColorRect/HSlider2Effx" to="." method="_on_h_slider_2_effx_value_changed"]
