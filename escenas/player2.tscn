@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cypflo2r1wcmp"]
+[gd_scene load_steps=22 format=3 uid="uid://cypflo2r1wcmp"]
 
 [ext_resource type="Script" path="res://script/player2.gd" id="1_g1fom"]
 [ext_resource type="Texture2D" uid="uid://lvbbvawhrg5e" path="res://sprites/oak_woods_v1.0/character/char_blue.png" id="1_snh0f"]
@@ -120,9 +120,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n0n3w"]
-load_path = "res://.godot/imported/char_blue.png-a1389410c67d891d6e0d146f017ac4a2.ctex"
-
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_g1fom")
 
@@ -138,16 +135,7 @@ texture_filter = 1
 position = Vector2(-10, -14)
 scale = Vector2(1.28571, 1.28571)
 sprite_frames = SubResource("SpriteFrames_51ikf")
-animation = &"stop"
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture_filter = 1
-position = Vector2(1, 1)
-scale = Vector2(1.21875, 1.21875)
-texture = SubResource("CompressedTexture2D_n0n3w")
-hframes = 7
-vframes = 5
+animation = &"walk"
 
 [node name="jumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_xf8uj")
