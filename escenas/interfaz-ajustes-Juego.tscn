@@ -1,11 +1,54 @@
 [gd_scene load_steps=8 format=3 uid="uid://co4uiswuuhvgj"]
 
-[ext_resource type="Script" path="res://escenas/Menu_Hamburguesa.gd" id="1_7yp8t"]
 [ext_resource type="Texture2D" uid="uid://d2e22gmr1qldl" path="res://interfaz/img/fondo.png" id="2_papp7"]
 [ext_resource type="Texture2D" uid="uid://bs6dm313yf7s8" path="res://interfaz/img/Maiz.png" id="3_54miw"]
 [ext_resource type="Texture2D" uid="uid://d1621lgr4kkxh" path="res://interfaz/img/church.png" id="4_5dye5"]
 [ext_resource type="Texture2D" uid="uid://daw7dbbbrnv7s" path="res://interfaz/img/building.png" id="5_c75bk"]
 [ext_resource type="Texture2D" uid="uid://cx4qjpbo17mhe" path="res://interfaz/icons/circle-xmark-regular.svg" id="6_0xyxr"]
+
+[sub_resource type="GDScript" id="GDScript_q3we6"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+@onready var h_slider_music = %HSliderMusic
+@onready var h_slider_2_effx = %HSlider2Effx
+
+var user_prefs: UserPreferences
+
+func _ready():
+	user_prefs = UserPreferences.read_or_create()
+	if h_slider_music:
+		h_slider_music.value = user_prefs.music_audio_level
+	if h_slider_2_effx:
+		h_slider_2_effx.value = user_prefs.sfx_audio_level
+
+
+
+
+func _on_close_button_pressed():
+	get_tree().change_scene_to_file(\"res://escenas/nivel_1.tscn\")
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file(\"res://escenas/interfaz-main.tscn\")
+	
+var musicSlider = AudioServer.get_bus_index(\"music\")
+var sfxSlider = AudioServer.get_bus_index(\"sfx\")
+
+func _on_h_slider_music_value_changed(value):
+	AudioServer.set_bus_volume_db(musicSlider, linear_to_db(value))
+	if user_prefs:
+		user_prefs.music_audio_level = value
+		user_prefs.save()
+	
+
+func _on_h_slider_2_effx_value_changed(value):
+	AudioServer.set_bus_volume_db(sfxSlider, linear_to_db(value))
+	if user_prefs:
+		user_prefs.sfx_audio_level = value
+		user_prefs.save()
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgkdc"]
 bg_color = Color(0.333333, 0.454902, 0.984314, 1)
@@ -22,7 +65,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7yp8t")
+script = SubResource("GDScript_q3we6")
 metadata/_edit_lock_ = true
 metadata/_edit_horizontal_guides_ = [549.0]
 
@@ -133,20 +176,69 @@ theme_override_constants/separation = 40
 
 [node name="Button" type="Button" parent="ColorRect"]
 layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -168.0
+offset_top = -159.0
+offset_right = 262.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_mgkdc")
+text = "KEY_MAIN_MENU"
+
+[node name="VBoxContainerLabels2" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -215.0
-offset_top = -42.5
-offset_right = 215.0
-offset_bottom = 42.5
+offset_left = -262.0
+offset_top = -34.0
+offset_right = 42.0
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_mgkdc")
-text = "KEY_MAIN_MENU"
+theme_override_constants/separation = 40
+
+[node name="musica" type="Label" parent="ColorRect/VBoxContainerLabels2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "KEY_MUSIC"
+
+[node name="efectos" type="Label" parent="ColorRect/VBoxContainerLabels2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+text = "KEY_EFECTS"
+
+[node name="HSliderMusic" type="HSlider" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 560.0
+offset_top = 340.0
+offset_right = 819.0
+offset_bottom = 356.0
+max_value = 1.0
+step = 0.001
+value = 0.5
+
+[node name="HSlider2Effx" type="HSlider" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 560.0
+offset_top = 438.0
+offset_right = 819.0
+offset_bottom = 454.0
+max_value = 1.0
+step = 0.001
+value = 0.5
 
 [node name="memoji" type="TextureRect" parent="."]
 layout_mode = 0
@@ -159,3 +251,5 @@ expand_mode = 1
 
 [connection signal="pressed" from="ColorRect/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="ColorRect/HSliderMusic" to="." method="_on_h_slider_music_value_changed"]
+[connection signal="value_changed" from="ColorRect/HSlider2Effx" to="." method="_on_h_slider_2_effx_value_changed"]
