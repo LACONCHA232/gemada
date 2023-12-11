@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cphrp3rk4fjl2"]
+[gd_scene load_steps=26 format=3 uid="uid://cphrp3rk4fjl2"]
 
 [ext_resource type="Texture2D" uid="uid://yg1fqd2p53hu" path="res://sprites/oak_woods_v1.0/oak_woods_tileset.png" id="1_bnatf"]
 [ext_resource type="PackedScene" uid="uid://cypflo2r1wcmp" path="res://escenas/player2.tscn" id="2_1a2sl"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://d4kwjses4el4r" path="res://escenas/chaska.tscn" id="16_pt68o"]
 [ext_resource type="PackedScene" uid="uid://caili1asv3qag" path="res://escenas/taco.tscn" id="17_o78br"]
 [ext_resource type="PackedScene" uid="uid://2bqiaw7yicy1" path="res://escenas/burrito.tscn" id="18_vpyps"]
+[ext_resource type="Script" path="res://script/end_game.gd" id="19_shklu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78qqt"]
 texture = ExtResource("1_bnatf")
@@ -651,6 +652,9 @@ size = Vector2(21.5, 271)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ahcj"]
 size = Vector2(4012.5, 27)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_l27ex"]
+radius = 47.0956
+
 [node name="nivel2" type="Node2D"]
 
 [node name="BackgroundLayer1" type="Sprite2D" parent="."]
@@ -873,4 +877,14 @@ scale = Vector2(0.895, 0.895)
 position = Vector2(628, 239)
 scale = Vector2(1.735, 1.735)
 
+[node name="end_game" type="Area2D" parent="."]
+position = Vector2(1, 1)
+script = ExtResource("19_shklu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="end_game"]
+position = Vector2(3994, -11)
+shape = SubResource("CircleShape2D_l27ex")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="end_game" to="end_game" method="_on_body_entered"]
+[connection signal="body_exited" from="end_game" to="end_game" method="_on_body_exited"]
