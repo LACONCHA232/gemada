@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cphrp3rk4fjl2"]
+[gd_scene load_steps=26 format=3 uid="uid://cphrp3rk4fjl2"]
 
 [ext_resource type="Texture2D" uid="uid://yg1fqd2p53hu" path="res://sprites/oak_woods_v1.0/oak_woods_tileset.png" id="1_bnatf"]
 [ext_resource type="PackedScene" uid="uid://cypflo2r1wcmp" path="res://escenas/player2.tscn" id="2_1a2sl"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://caili1asv3qag" path="res://escenas/taco.tscn" id="17_o78br"]
 [ext_resource type="PackedScene" uid="uid://2bqiaw7yicy1" path="res://escenas/burrito.tscn" id="18_vpyps"]
 [ext_resource type="PackedScene" uid="uid://dejddd41odr8y" path="res://escenas/Enemy.tscn" id="19_bpa3f"]
+[ext_resource type="PackedScene" uid="uid://s348oq7xdh1" path="res://escenas/chaskaDelFinal.tscn" id="20_gtotk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78qqt"]
 texture = ExtResource("1_bnatf")
@@ -826,10 +827,11 @@ position = Vector2(3084, 25)
 position = Vector2(2063, 227)
 
 [node name="chaska10" parent="." instance=ExtResource("16_pt68o")]
-position = Vector2(624, -2)
+position = Vector2(745, 51)
 
-[node name="chaska11" parent="." instance=ExtResource("16_pt68o")]
-position = Vector2(4345, -22)
+[node name="chaska11" parent="." instance=ExtResource("20_gtotk")]
+texture_filter = 1
+position = Vector2(4361, -21)
 scale = Vector2(3.29, 3.29)
 
 [node name="taco" parent="." instance=ExtResource("17_o78br")]
@@ -845,7 +847,7 @@ position = Vector2(884, 253)
 position = Vector2(2354, 226)
 
 [node name="taco5" parent="." instance=ExtResource("17_o78br")]
-position = Vector2(1692, -9)
+position = Vector2(1898, 93)
 
 [node name="taco6" parent="." instance=ExtResource("17_o78br")]
 position = Vector2(2869, 30)
@@ -871,7 +873,7 @@ position = Vector2(3302, 29)
 scale = Vector2(0.895, 0.895)
 
 [node name="burrito5" parent="." instance=ExtResource("18_vpyps")]
-position = Vector2(2381, -13)
+position = Vector2(2535, -4)
 scale = Vector2(0.895, 0.895)
 
 [node name="burrito6" parent="." instance=ExtResource("18_vpyps")]
