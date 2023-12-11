@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dejddd41odr8y"]
+[gd_scene load_steps=11 format=3 uid="uid://bsfogryqstwwk"]
 
 [ext_resource type="Script" path="res://script/Enemy.gd" id="1_4hoap"]
 [ext_resource type="Texture2D" uid="uid://blo5ceil4iqa0" path="res://sprites/oak_woods_v1.0/enemigos/enemigos.png" id="2_npoqa"]
