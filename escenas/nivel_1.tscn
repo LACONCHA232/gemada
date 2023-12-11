@@ -1,15 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2b1egfpdeqc6"]
+[gd_scene load_steps=11 format=3 uid="uid://b2b1egfpdeqc6"]
 
 [ext_resource type="Texture2D" uid="uid://bhuejrpuqyaks" path="res://sprites/cielo.png" id="1_eu8fn"]
 [ext_resource type="Texture2D" uid="uid://107m2by8o6ji" path="res://sprites/piso.png" id="2_3inys"]
 [ext_resource type="PackedScene" uid="uid://pet120ck6jaq" path="res://escenas/trees.tscn" id="2_xcwbx"]
 [ext_resource type="PackedScene" uid="uid://r5x2l335rmg1" path="res://escenas/player.tscn" id="3_cyt7w"]
 [ext_resource type="PackedScene" uid="uid://rmvhp5lgqnaa" path="res://escenas/mobileControls.tscn" id="4_l8wbp"]
+[ext_resource type="Texture2D" uid="uid://cvmlfaoco3yni" path="res://sprites/buildings/triciclo.png" id="6_oq46w"]
+[ext_resource type="Script" path="res://script/triciclo_area.gd" id="7_rm11b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_qb23h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsejs"]
 size = Vector2(55, 987.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1371s"]
+radius = 205.623
 
 [node name="nivel1" type="Node2D"]
 
@@ -33,6 +38,11 @@ position = Vector2(11705.6, 519)
 scale = Vector2(3, 3)
 texture = ExtResource("2_3inys")
 
+[node name="triciclo" type="Sprite2D" parent="."]
+position = Vector2(4685, 485.438)
+scale = Vector2(0.560853, 0.621512)
+texture = ExtResource("6_oq46w")
+
 [node name="player" parent="." instance=ExtResource("3_cyt7w")]
 position = Vector2(-37, 426)
 
@@ -54,3 +64,59 @@ position = Vector2(22994, 139)
 shape = SubResource("RectangleShape2D_xsejs")
 
 [node name="mobileControls" parent="." instance=ExtResource("4_l8wbp")]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="instruciones_titulo_1" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 910.0
+offset_top = 170.0
+offset_right = 1597.0
+offset_bottom = 249.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "KEY_INSTRUCCIONS_TITLE"
+
+[node name="instruciones_titulo_2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 2298.0
+offset_top = 170.0
+offset_right = 2985.0
+offset_bottom = 249.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "KEY_INSTRUCCIONS_TITLE"
+
+[node name="instrucciones" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 910.0
+offset_top = 270.0
+offset_right = 1566.0
+offset_bottom = 583.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+text = "KEY_INSTRUCCIONS"
+
+[node name="instrucciones2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 2298.0
+offset_top = 270.0
+offset_right = 2954.0
+offset_bottom = 565.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+text = "KEY_INSTRUCCIONS"
+
+[node name="triciclo_area" type="Area2D" parent="."]
+script = ExtResource("7_rm11b")
+
+[node name="CollisionShape_triciclo" type="CollisionShape2D" parent="triciclo_area"]
+position = Vector2(4727, 494)
+shape = SubResource("CircleShape2D_1371s")
+
+[connection signal="body_entered" from="triciclo_area" to="triciclo_area" method="_on_body_entered"]
+[connection signal="body_exited" from="triciclo_area" to="triciclo_area" method="_on_body_exited"]

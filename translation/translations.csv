@@ -15,3 +15,21 @@ KEY_CHOSE_LEVEL,Seleccione un nivel,Select a level,レベルを選択してく�
 KEY_TUTORIAL,Nivel 1 - Tutorial,Level 1 - Tutorial,レベル 1 - チュートリアル,级别1 - 教程
 KEY_LEVEL_2,Nivel 2,Level 2,レベル 2,级别2
 KEY_SOON,Proximamente ,Coming soon,近日公開予定,即将推出 
+KEY_INSTRUCCIONS_TITLE,Instrucciones,Instructions,指示,说明
+KEY_INSTRUCCIONS,"Usa las flechas izquierda y derecha para moverte. 
+La flecha hacia arriba es para saltar. 
+En el menú de hamburguesa podrás modificar el volumen 
+e ir al menú principal. 
+Avanza al puesto de elotes para continuar al siguiente nivel. ","Use the left and right arrows to move. 
+The up arrow is for jumping. In the hamburger menu, 
+you can adjust the volume and go to the main menu. 
+Move to the corn stand to proceed to the next level."," 左右の矢印を使用して移動します。
+上向きの矢印はジャンプ用です。
+ハンバーガーメニューでは、
+音量を調整したりメインメニューに移動したりできます。
+次のレベルに進むにはとうもろこしの売り場に進んでください。","使用左右箭头进行移动。
+向上箭头是跳跃用的。在汉堡菜单中，
+您可以调整音量并转到主菜单。
+移动到玉米摊位以继续到下一级"
+KEY_BYE,Gracías por jugar,Thanks for playing,遊んでくれてありがとう,谢谢你的参与
+KEY_CREDITS,Créditos,Credits,クレジット,积分 

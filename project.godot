@@ -27,7 +27,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translation/internationalize - spreadsheet - Hoja 1 (1).en.translation", "res://translation/internationalize - spreadsheet - Hoja 1 (1).es.translation", "res://translation/internationalize - spreadsheet - Hoja 1 (1).ja.translation", "res://translation/internationalize - spreadsheet - Hoja 1 (1).zh.translation")
+locale/translations=PackedStringArray("res://translation/translations.en.translation", "res://translation/translations.es.translation", "res://translation/translations.ja.translation", "res://translation/translations.zh.translation")
 
 [rendering]
 
