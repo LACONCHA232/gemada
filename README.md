@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 Para la explicacion del programa, mas que nada su usabilidad  y/o caracteristicas del mismo
 =======
 <h1>GEMADA</h1>
@@ -23,5 +23,3 @@ Ambientado en la ciudad de Aguascalientes, buscando una representación de
 nuestra ciudad en el mundo de los videojuegos, este juego tomará como referencia
 la feria nacional de san marcos.
 </p>
-
->>>>>>> 7a376618f1fba4f1038f2e6d9d5484474643236d
