@@ -23,3 +23,4 @@ Ambientado en la ciudad de Aguascalientes, buscando una representación de
 nuestra ciudad en el mundo de los videojuegos, este juego tomará como referencia
 la feria nacional de san marcos.
 </p>
+![gemadDesktop](https://github.com/user-attachments/assets/9bb0b0f1-8758-4ff3-bdc5-c56f3b3b48ac)
